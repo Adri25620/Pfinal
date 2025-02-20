@@ -1,0 +1,16 @@
+body {
+    background-image: url(/IMAGE/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+    font-size: 250px;
+    text-align: center;
+    margin-top: 20px;
+    color: tomato;
+    /*-webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: black;*/
+            
+}
