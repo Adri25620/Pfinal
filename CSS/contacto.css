@@ -1,19 +1,30 @@
 body {
-    background-image: url(/IMAGE/fondo.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    font-family: 'Courier New', Courier, monospace;
+  font-family: sans-serif;
 }
-h1 {
-    font-size: 250px;
-    text-align: center;
-    margin: 5px 10px 5px 10px;
-    color: tomato;
-    /*-webkit-text-stroke-width: 5px;
-    -webkit-text-stroke-color: black;*/
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+
+
+.videofondo {
+  position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+z-index: -1;
+  }
+
+  
+header {
+  font-size: 75px;
+  font-weight: bold;
+  text-align: left;
+  margin: 5px 10px 5px 10px;
+  color: red;
+  /*-webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: black;*/
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
+
 nav {
     width: 80%;
     margin-top: 5px;
@@ -28,7 +39,6 @@ ul {
     display: flex;
     justify-content: center;
 }
-  }
   
   li {
     float: left;
@@ -45,3 +55,74 @@ ul {
   li a:hover {
     background-color: #111;
   }
+
+
+  .caja1 {
+    text-align: center; /*texto del cuadro centrado*/
+    width: 40%; /*ancho del cuadro*/
+    height: 915px; /*alto del cuadro*/
+    border-radius: 50px; /*redondo de las esquinas*/
+    margin-top: 30px;
+    margin-left: 450px; /*margen a la izquierda*/
+    border: 2px solid rgba(204, 204, 204, 0.5); /* Borde semi-transparente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con 80% de opacidad */
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.dlabel {
+    font-size: 18px; /*tamaño de letra*/
+    color: gray; /*color de letra*/
+}
+
+.clabel {
+  font-size: 18px; /*tamaño de letra*/
+  color: gray; /*color de letra*/
+  display: block; /*ocupa el ancho disponible*/
+  margin-bottom: 3px; /*deja un pequeño espacio entre el texto y el siguiente elemento*/
+}
+
+.cinput {
+  width: 90%; /*el ancho del cuadro*/
+  padding: 10px; /*margen alrededor del texto*/
+  border: 3px solid rgb(238, 218, 218); /*estilo del borde*/
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente estándar */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px;
+  width: 200px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+footer {
+  background-color: #333;
+  text-align: center;
+  width: 100%;
+  height: 3%;
+}
+
+.fot {
+  color: white;
+}
+
+#ref {
+  padding: 8px;
+  width: 50px;
+  height: 50px;
+}

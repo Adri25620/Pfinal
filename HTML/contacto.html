@@ -7,12 +7,91 @@
     <link rel="stylesheet" href="/CSS/contacto.css">
 </head>
 <body>
-    <h1>TOYOTA</h1>
+    <div class="videofondo">
+        <video autoplay muted loop>
+            <source src="../VIDEO/1052-142621416_compressed.mp4">
+        </video>
+    </div>
+    <header>TOYOTA</header>
     <ul>
         <li><a class="active" href="/HTML/index.html">INICIO</a></li>
         <li><a href="/HTML/somos.html">¿QUIENES SOMOS?</a></li>
         <li><a href="/HTML/vehiculos.html">VEHICULOS</a></li>
         <li><a href="/HTML/contacto.html">CONTACTO</a></li>
       </ul>
+      <div class="caja1">
+        <h3>
+            ATENCION PERSONALIZADA 
+        </h3>
+        <p>Seleccione una opcion y llene todos los campos.</p>
+        <form>
+        <input class="dinput" type="radio" name="option">
+        <label class="dlabel" for="Cotizacion">Cotizacion</label>
+
+        <br>
+
+        <input class="dinput" type="radio" name="option">
+        <label class="dlabel" for="cita">Cita</label>
+
+        <br>
+
+        <input class="dinput" type="radio" name="option">
+        <label class="dlabel" for="atencion al cliente">Atencion al Cliente</label>
+
+        <br>
+
+        <input class="dinput" type="radio" name="option">
+        <label class="dlabel" for="Prueba de manejo">Prueba de Manejo</label>
+
+        <br><br>
+
+        <label class="clabel" for="name">Nombre Completo</label>
+        <input class="cinput" type="text" placeholder="Nombre" required>
+
+        <label class="clabel" for="number">DPI</label>
+        <input class="cinput" type="text" placeholder="No. DPI" required>
+
+        <label class="clabel" for="email">Correo Electronico</label>
+        <input class="cinput" type="text" placeholder="example@gmail.com" required>
+
+        <label class="clabel" for="number">Numero de telefono</label>
+        <input class="cinput" type="text" placeholder="+502 45653212" required>
+
+        <label class="clabel" for="date">Fecha de nacimiento</label>
+        <input class="cinput" type="date" required>
+
+        <label class="clabel" for="adress">Direccion de casa</label>
+        <input class="cinput" type="text" placeholder="Direccion" required>
+
+        <label class="clabel" for="agencia">Seleccione Agencia</label>
+        <select class="cinput" name="Agencia" id="Agencia" required>
+            <option value="" disabled selected>Seleccione Agencia</option>
+            <option value="Agencia">Agencia Salama</option>
+            <option value="Agencia">Agencia Guatemala</option>
+            <option value="Agencia">Agencia Coban</option>
+            <option value="Agencia">Agencia Carretera Salvador</option>
+            <option value="Agencia">Agencia Teculutan</option>
+            <option value="Agencia">Agencia Escuintla</option>
+            <option value="Agencia">Agencia Peten</option>
+            <option value="Agencia">Agencia Huehuetenango</option>
+            <option value="Agencia">Agencia Guastatoya</option>
+        </select>
+
+        <label class="clabel" for="comentario">Comentario</label>
+        <textarea name="Coemntario" id="" rows="8" cols="70"></textarea>
+
+        <br><br>
+        <button>Enviar</button>
+    </form>
+    </div>
+
+    <footer>
+        <p class="fot">Siguenos en nuestras redes sociales:</p>
+        <a href="https://api.whatsapp.com/send?phone=50222040404"><img id="ref" src="/IMAGE/whatsapp--v2.png" alt="Whatsapp"></a>
+        <a href="https://www.youtube.com/channel/UCZXGc2_NFXwVp2RbKdzQ7pg"><img id="ref" src="/IMAGE/icons8-youtube-50 (1).png" alt="youtube"></a>
+        <a href="https://www.instagram.com/toyotaguatemala/?hl=es-la"><img id="ref" src="/IMAGE/icons8-instagram-64.png" alt="instagram"></a>
+        <a href="https://www.facebook.com/ToyotaGuatemala/"><img id="ref" src="/IMAGE/icons8-facebook-50.png" alt=""></a>
+    </footer>
+
 </body>
 </html>

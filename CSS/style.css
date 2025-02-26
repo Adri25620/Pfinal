@@ -1,47 +1,232 @@
-body {
-    background-image: url(/IMAGE/fondo.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    font-family: 'Courier New', Courier, monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
 }
-h1 {
-    font-size: 250px;
-    text-align: center;
-    margin: 5px 10px 5px 10px;
-    color: tomato;
-    /*-webkit-text-stroke-width: 5px;
-    -webkit-text-stroke-color: black;*/
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+
+
+.superficie {
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 90vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 2;
 }
-nav {
-    width: 80%;
-    margin-top: 5px;
-    margin-left: 150px;
+
+
+header {
+  position: absolute; /* Se queda pegado arriba */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px; /* Espaciado para que no quede apachado */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
+
+
+
+/* 📌 Estilo del texto "TOYOTA" */
+.logo {
+  font-size: 85px;
+  color: red;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5); /* Sombrilla para que se vea chilero */
 }
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
+
+
+.contenedor {
+  background: transparent; /* Sin fondo, pa' que se vea fino */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+ 
+}
+
+/* 📌 Logo Toyota */
+#imglogo {
+  margin: 0 150px 10px 5px; /*Movemos el logo para que no quede chueco */
+  width: 125px;
+  height: 85px;
+}
+
+
+
+/* 📌 Lista del menú */
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  list-style: none; /* Quitamos esos puntitos molestos */
+}
+
+/* 📌 Estilos de cada opción del menú */
+nav ul li a {
+  display: inline-block;
+  padding: 15px 35px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.4s;
+  text-shadow: 10px 10px 10px black;
+  text-decoration: none;
+}
+
+/* 📌 Efecto al pasar el mouse (hover) */
+nav ul li a::after {
+  content: '';
+  background: red;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav ul li a:hover::after {
+  opacity: 1;
+}
+
+
+
+/* 📌 Modo activo de la superficie (cuando algo cambie) 
+.superficie.active {
+  right: 300px;
+}*/
+
+/* 📌 Video de fondo */
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Que se acomode bonito */
+  opacity: 0.9;
+}
+
+/* 📌 Capa oscura para que resalten los textos */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Un poco más claro que antes */
+}
+
+
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+/* 📌 Título Principal */
+.text h2 {
+  font-size: 3em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+/* 📌 Subtítulo */
+.text h3 {
+  font-size: 5em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+/* 📌 Párrafo */
+.text p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+/* 📌 Botón "Servicio de Ventas" */
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+/* ========================= */
+/* 🔴 IMAGEN DE LOS CARROS 🔴 */
+/* ========================= */
+
+.carros {
+  position: absolute;
+  right: 10%; /* Antes estaba muy a la derecha */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* 📌 Imagen del carro */
+.carro {
+  width: 500px;
+}
+
+
+footer {
+  background-color: rgba(204, 204, 204, 0.8); /* Borde semi-transparente */
+  text-align: center;
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  z-index: 10;
+}
+
+.fot {
+  color: white;
+  font-size: 18px;
+}
+
+#ref {
+  padding: 8px;
+  width: 50px;
+  height: 50px;
+}
