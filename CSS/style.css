@@ -1,232 +1,201 @@
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  margin: 0; /*elimina el margen predeterminado*/
+  padding: 0; /*elimina el padding predeterminado*/
+  box-sizing: border-box; /*para que no afecte al tamaño total del elemento*/
+  font-family: 'Courier New', Courier, monospace; /*estilo de letra*/
 }
 
 
 .superficie {
-  position: relative;
-  right: 0;
-  width: 100%;
-  min-height: 90vh;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s;
-  z-index: 2;
+  position: relative; /*posicion relativa para ajustar el contenido*/
+  right: 0; /*alineacion a la derecha*/
+  width: 100%; /*ancho de la pantalla*/
+  min-height: 90vh; /*altura de la pantalla*/
+  padding: 100px; /*espaciado alrededor de la seccion*/
+  display: flex; /*para organizar el contenido*/
+  justify-content: space-between; /*distribuye el contenido para que haya espacio entre los elementos*/
+  align-items: center; /*centra los elementos verticalmente*/
+  transition: 0.5s; /*agrega transicion*/
+  z-index: 2; /*para colocar encima de otros elementos*/
 }
 
 
 header {
-  position: absolute; /* Se queda pegado arriba */
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px; /* Espaciado para que no quede apachado */
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: absolute; /*Se queda pegado arriba*/
+  top: 0; /*coloca el encabezado hasta arriba*/
+  left: 0; /*alineacion a la izquierda*/
+  width: 100%; /*ancho de pantalla*/
+  padding: 40px 100px; /*Espacia arriba, abajo y a los lados*/
+  z-index: 1000; /*para que quede encima de otros elementos*/
+  display: flex; /*organiza los elementos*/
+  justify-content: space-between; /*espacio entre los elementos del encabezado*/
+  align-items: center; /*alineacion de elemetnos*/
 }
 
-
-
-/* 📌 Estilo del texto "TOYOTA" */
 .logo {
-  font-size: 85px;
-  color: red;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5); /* Sombrilla para que se vea chilero */
+  font-size: 85px; /*tamaño de letra*/
+  color: red; /*color*/
+  text-transform: uppercase; /*texto en mayusculas*/
+  cursor: pointer; /*estilo de curso*/
+  text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5); /*Sombrilla para que se vea chilero*/
 }
-
 
 .contenedor {
-  background: transparent; /* Sin fondo, pa' que se vea fino */
-  display: flex;
-  align-items: center;
-  gap: 20px;
- 
+  background: transparent; /*Sin fondo, pa' que se vea fino*/
+  display: flex; /*organiza elementos dentro del contenedor*/
+  align-items: center; /*centra elementos verticalmente*/
+  gap: 20px; /*espacio entre elementos*/
 }
 
-/* 📌 Logo Toyota */
 #imglogo {
-  margin: 0 150px 10px 5px; /*Movemos el logo para que no quede chueco */
-  width: 125px;
-  height: 85px;
+  margin: 0 150px 10px 5px; /*Movemos el logo para que no quede chueco*/
+  width: 125px; /*ancho*/
+  height: 85px; /*alto*/
 }
 
-
-
-/* 📌 Lista del menú */
 nav ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
+  display: flex; /*organiza los elementos*/
+  padding: 0; /*elimina padding predeterminado*/
+  margin: 0; /*elimina margen predeterminado*/
 }
 
 nav ul li {
-  list-style: none; /* Quitamos esos puntitos molestos */
+  list-style: none; /*Quitamos puntos de lista*/
 }
 
-/* 📌 Estilos de cada opción del menú */
 nav ul li a {
-  display: inline-block;
-  padding: 15px 35px;
-  margin: 10px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #ffffff;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  transition: color 0.4s;
-  text-shadow: 10px 10px 10px black;
-  text-decoration: none;
+  display: inline-block; /*los enlaces queden en bloque en linea*/
+  padding: 15px 35px; /*agrega relleno dentro los enlaces*/
+  margin: 10px; /*margen de los enlaces*/
+  font-size: 18px; /*tamaño de letra*/
+  font-weight: 500; /*grosor*/
+  color: #ffffff; /*color blanco*/
+  cursor: pointer; /*estilo de cursor*/
+  position: relative; /*posicion*/
+  z-index: 2; /*sobre otros elementos*/
+  transition: color 0.4s; /*transicion*/
+  text-shadow: 10px 10px 10px black; /*sombra de texto*/
+  text-decoration: none; /*sin subrayado*/
 }
 
-/* 📌 Efecto al pasar el mouse (hover) */
 nav ul li a::after {
-  content: '';
-  background: red;
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
+  content: ''; /*elemento vacio*/
+  background: red; /*fondo rojo*/
+  width: 100%; /*ancho*/
+  height: 100%; /*altura*/
+  border-radius: 30px; /*bordes redondeados*/
+  position: absolute; /*posiciona del contenido*/
+  top: 50%; /*alineado verticalmente*/
+  left: 50%; /*alineado horizontalmente*/
+  transform: translate(-50%, -50%); /*ajusta para que quede exactamente centrado*/
+  z-index: -1; /*para que quede debajo del texto */
+  opacity: 0; /*lo hace invisible*/
+  transition: all 0.4s ease-in-out; /*transición*/
 }
 
 nav ul li a:hover {
-  color: #ffffff;
+  color: #ffffff; /*color*/
 }
 
 nav ul li a:hover::after {
-  opacity: 1;
+  opacity: 1; /*invisible*/
 }
 
-
-
-/* 📌 Modo activo de la superficie (cuando algo cambie) 
-.superficie.active {
-  right: 300px;
-}*/
-
-/* 📌 Video de fondo */
 video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Que se acomode bonito */
-  opacity: 0.9;
+  position: fixed; /*fija el video en la pagina*/
+  top: 0; /*margen*/
+  left: 0; /*margen*/
+  width: 100%; /*ancho de la pantalla*/
+  height: 100%; /*altura de la pantalla*/
+  object-fit: cover; /*cubre todo sin distorcionarse*/
+  opacity: 0.9; /*invisible*/
 }
 
-/* 📌 Capa oscura para que resalten los textos */
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Un poco más claro que antes */
+  position: absolute; /*posicion del video*/
+  top: 0; /*margen superior */
+  left: 0; /*margen izquierdo */
+  width: 100%; /*ancho de la pantalla */
+  height: 100%; /*altura de la pantalla */
+  background: rgba(0, 0, 0, 0.5); /*capa semi-transparente oscura */
 }
-
 
 .text {
-  position: relative;
-  z-index: 10;
+  position: relative; /*coloca el texto encima de otros elementos */
+  z-index: 10; /*texto por encima de la capa overlay */
 }
 
-/* 📌 Título Principal */
 .text h2 {
-  font-size: 3em;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
+  font-size: 3em; /*tamaño grande para el título */
+  font-weight: 800; /* estilo de letra*/
+  color: #fff; /* Color blanco*/
+  line-height: 1em; /*interlineado */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
 
-/* 📌 Subtítulo */
 .text h3 {
-  font-size: 5em;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
+  font-size: 5em; /* tamaño de letra */
+  font-weight: 700; /* ancho de letra */
+  color: #fff; /*color blanco */
+  line-height: 1em; /*interlineado*/
+  text-transform: uppercase; /*texto en mayúsculas */
 }
 
-/* 📌 Párrafo */
 .text p {
-  font-size: 1.1em;
-  color: #fff;
-  margin: 20px 0;
-  font-weight: 400;
-  max-width: 700px;
+  font-size: 1.1em; /*tamaño de letra */
+  color: #fff; /*color blanco*/
+  margin: 20px 0; /*margen arriba y abajo */
+  font-weight: 400; /*ancho de letra*/
+  max-width: 700px; /*ancho máximo del párrafo */
 }
 
-/* 📌 Botón "Servicio de Ventas" */
 .text a {
-  display: inline-block;
-  font-size: 1em;
-  background: #fff;
-  padding: 10px 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  color: #111;
-  letter-spacing: 2px;
-  transition: 0.2s;
-  border-radius: 10px;
+  display: inline-block; /*elemento como un bloque en línea */
+  font-size: 1em; /*tamaño de letra*/
+  background: #fff; /*fondo blanco para el botón */
+  padding: 10px 30px; /*relleno alrededor del texto */
+  text-transform: uppercase; /*texto en mayúsculas */
+  text-decoration: none; /*elimina el subrayado */
+  font-weight: 500; /*ancho de letra */
+  margin-top: 10px; /*margen superior */
+  color: #111; /*color de texto oscuro */
+  letter-spacing: 2px; /*interlineado */
+  transition: 0.2s; /*transición*/
+  border-radius: 10px; /*bordes redondeados */
 }
 
 .text a:hover {
-  letter-spacing: 6px;
+  letter-spacing: 6px; /*aumenta el espaciado entre letras cuando se pasa el mouse */
 }
-
-/* ========================= */
-/* 🔴 IMAGEN DE LOS CARROS 🔴 */
-/* ========================= */
 
 .carros {
-  position: absolute;
-  right: 10%; /* Antes estaba muy a la derecha */
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
+  position: absolute; /*posiciona la imagen de manera absoluta */
+  right: 10%; /*margen a la izquierda */
+  top: 50%; /*margen arriba */
+  transform: translateY(-50%); /*centra la imagen verticalmente */
+  z-index: 2; /*sobre otros elementos */
 }
 
-/* 📌 Imagen del carro */
 .carro {
-  width: 500px;
+  width: 500px; /*ancho de la imagen */
 }
-
 
 footer {
-  background-color: rgba(204, 204, 204, 0.8); /* Borde semi-transparente */
-  text-align: center;
-  width: 100%;
-  height: 10%;
-  position: fixed;
-  z-index: 10;
+  background-color: rgba(204, 204, 204, 0.8); /*fondo semi-transparente */
+  text-align: center; /* alineacion de texto */
+  width: 100%; /*ancho*/
+  height: 10%; /*altura*/
+  position: fixed; /*fijacion en la parte inferior de la página */
+  z-index: 10; /*sobre otros elementos */
 }
 
 .fot {
-  color: white;
-  font-size: 18px;
+  color: white; /*color blanco*/
+  font-size: 18px; /*tamaño de letra */
 }
 
 #ref {
-  padding: 8px;
-  width: 50px;
-  height: 50px;
+  padding: 8px; /*relleno alrededor */
+  width: 50px; /*tamaño de las imágenes */
+  height: 50px; /*altura de las imágenes */
 }

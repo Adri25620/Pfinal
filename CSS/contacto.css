@@ -1,128 +1,124 @@
 body {
-  font-family: sans-serif;
+  font-family: sans-serif; /*estilo de letra*/
 }
 
-
 .videofondo {
-  position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-overflow: hidden;
-z-index: -1;
-  }
+  position: fixed; /*fija la posición del video en el fondo*/
+  top: 0; /*margen arriba*/
+  left: 0; /*margen de la izquierda */
+  width: 100%; /*ancho del video */
+  height: 100%; /*altura del video */
+  overflow: hidden; /*oculta cualquier contenido que se desborde */
+  z-index: -1; /*video detras de otros elementos */
+}
 
-  
 header {
-  font-size: 75px;
-  font-weight: bold;
-  text-align: left;
-  margin: 5px 10px 5px 10px;
-  color: red;
-  /*-webkit-text-stroke-width: 5px;
-  -webkit-text-stroke-color: black;*/
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  font-size: 75px; /*tamaño de letra*/
+  font-weight: bold; /*negrita */
+  text-align: left; /*alineacion a la izquierda */
+  margin: 5px 10px 5px 10px; /*marrgenes alrededor del texto */
+  color: red; /*color*/
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /*agrega sombra al texto */
 }
 
 nav {
-    width: 80%;
-    margin-top: 5px;
-    margin-left: 150px;
+    width: 80%; /*ancho de la barra*/
+    margin-top: 5px; /*margen arriba */
+    margin-left: 150px; /*margenes de la izquierda */
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
+    list-style-type: none; /*elimina los puntos de lista */
+    margin: 0; /*margen*/
+    padding: 0; /*relleno*/
+    overflow: hidden; /*evita que los elementos se desborden */
+    background-color: #333; /*color de fondo*/
+    display: flex; /*contenedor flexible*/
+    justify-content: center; /*centra los elementos en la barra */
 }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
 
+li {
+    float: left; /*hace que los elementos se alineen de izquierda a derecha */
+}
 
-  .caja1 {
-    text-align: center; /*texto del cuadro centrado*/
-    width: 40%; /*ancho del cuadro*/
-    height: 915px; /*alto del cuadro*/
-    border-radius: 50px; /*redondo de las esquinas*/
-    margin-top: 30px;
-    margin-left: 450px; /*margen a la izquierda*/
-    border: 2px solid rgba(204, 204, 204, 0.5); /* Borde semi-transparente */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con 80% de opacidad */
+li a {
+    display: block; /*contenedor ocupa todo el bloque */
+    color: white; /* Color para el texto */
+    text-align: center; /*alineacion del texto */
+    padding: 14px 16px; /*relleno alrededor del texto */
+    text-decoration: none; /*elimina el subrayado de los enlaces */
+}
+
+li a:hover {
+    background-color: #111; /* fondo más oscuro al pasar encima */
+}
+
+.caja1 {
+    text-align: center; /*alineacion centrada*/
+    width: 40%; /*ancho de la caja*/
+    height: 915px; /*altura de la caja */
+    border-radius: 50px; /*bordes redondeados */
+    margin-top: 30px; /*margen arriba */
+    margin-left: 450px; /*margen de la izquierda*/
+    border: 2px solid rgba(204, 204, 204, 0.5); /*borde transparente */
+    background-color: rgba(255, 255, 255, 0.8); /*fondo blanco*/
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 20px; /*tamaño de letra*/
 }
 
 p {
-  font-size: 18px;
+  font-size: 18px; /*tamaño de letra*/
 }
 
 .dlabel {
-    font-size: 18px; /*tamaño de letra*/
-    color: gray; /*color de letra*/
+    font-size: 18px; /*tamaño de letra */
+    color: gray; /*color de texto*/
 }
 
 .clabel {
-  font-size: 18px; /*tamaño de letra*/
-  color: gray; /*color de letra*/
-  display: block; /*ocupa el ancho disponible*/
-  margin-bottom: 3px; /*deja un pequeño espacio entre el texto y el siguiente elemento*/
+  font-size: 18px; /*tamaño de letra */
+  color: gray; /*color de texto*/
+  display: block; /*la etiqueta ocupa todo el ancho */
+  margin-bottom: 3px; /*espacio debajo de la etiqueta */
 }
 
 .cinput {
-  width: 90%; /*el ancho del cuadro*/
-  padding: 10px; /*margen alrededor del texto*/
-  border: 3px solid rgb(238, 218, 218); /*estilo del borde*/
-  border-radius: 4px; /* Bordes redondeados */
-  font-size: 1rem; /* Tamaño de fuente estándar */
-  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  width: 90%; /*ancho del cuadro de texto */
+  padding: 10px; /*relleno dentro del cuadro */
+  border: 3px solid rgb(238, 218, 218); /*estilo del borde */
+  border-radius: 4px; /*bordes redondeados */
+  font-size: 1rem; /*tamaño del texto*/
+  box-sizing: border-box; /*asegura que el padding no afecte el ancho */
 }
 
 button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 16px;
-  padding: 8px;
-  width: 200px;
-  cursor: pointer;
-  margin: 2px;
+  display: inline-block; /*hace que el botón se muestre en linea */
+  border-radius: 4px; /*bordes redondeados */
+  background-color: #f4511e; /*color del fondo */
+  color: #FFFFFF; /*color del texto */
+  text-align: center; /*alineacion del texto */
+  font-size: 16px; /*tamaño de letra*/
+  padding: 8px; /*espaciado dentro del boton */
+  width: 200px; /*ancho del boton */
+  cursor: pointer; /*cambia el cursor al pasar sobre el boton */
+  margin: 2px; /*margen alrededor del boton */
 }
 
 footer {
-  background-color: #333;
-  text-align: center;
-  width: 100%;
-  height: 3%;
+  background-color: #333; /*color de fondo*/
+  text-align: center; /*alineacion del texto*/
+  width: 100%; /*ancho*/
+  height: 3%; /*altura*/
 }
 
 .fot {
-  color: white;
+  color: white; /*color del texto*/
 }
 
 #ref {
-  padding: 8px;
-  width: 50px;
-  height: 50px;
+  padding: 8px; /*relleno alrededor de los iconos */
+  width: 50px; /*ancho de los iconos */
+  height: 50px; /*alto de los iconos */
 }

@@ -1,162 +1,163 @@
 body {
-  font-family: sans-serif;
-  align-items: center;
+  font-family: sans-serif; /*tipo de letra */
+  align-items: center; /*alineacion de elementos*/
 }
 
 .videofondo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
+  position: fixed; /*fija el video en el fondo */
+  top: 0; /*margen arriba*/
+  left: 0; /*margen a la izquierda */
+  width: 100vw; /*ancho de ventana */
+  height: 100vh; /*alto de la ventana */
+  object-fit: cover; /*relación de aspecto*/
+  z-index: -1; /*coloca el video detrás de otros elementos */
 }
 
 header {
-  font-size: 75px;
-  font-weight: bold;
-  text-align: left;
-  margin: 5px 10px 5px 10px;
-  color: red;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  font-size: 75px; /*tamaño de letra */
+  font-weight: bold; /*negrita */
+  text-align: left; /*alineación a la izquierda */
+  margin: 5px 10px 5px 10px; /*margenes alrededor */
+  color: red; /*rojo para el texto */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Sombra del texto para resaltar */
 }
 
 nav {
-    width: 80%;
-    margin-top: 5px;
-    margin-left: 150px;
+    width: 80%; /*ancho de la barra de navegación será del 80% */
+    margin-top: 5px; /*margen arriba*/
+    margin-left: 150px; /* margen de la izquierda */
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
+    list-style-type: none; /*elimina los puntos de la lista */
+    margin: 0; /*margene */
+    padding: 0; /*relleno*/
+    overflow: hidden; /*evita que se desborden los elementos*/
+    background-color: #333; /*color de fondo oscuro */
+    display: flex; /*contenedor flexible */
+    justify-content: center; /*centra los elementos */
 }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
 
-  .galeria {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin-top: 70px;
-    margin-left: 200px;
-  }
-  
-  .galeria .imagen {
-    position: relative;
-    width: 300px;
-    height: 320px;
-    margin: 15px;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .galeria .imagen .carro,
-  .galeria .imagen .textoatras {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .galeria .imagen .carro img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .galeria .imagen .textoatras::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(226, 226, 226, 0.8); /* Fondo gris translúcido */
-    transform: scaleX(0);
-    transition: transform 0.5s ease-in-out;
-    transform-origin: right;
-  }
-  
-  .galeria .imagen:hover .textoatras::before {
-    transform: scaleX(1);
-    transition-delay: 0s;
-    transform-origin: left;
-  }
-  
-  .galeria .imagen .textoatras {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .galeria .imagen .textoatras .texto {
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  .galeria .imagen:hover .textoatras .texto {
-    opacity: 1;
-  }
-  
-  .galeria .imagen .textoatras .texto h3 {
-    font-size: 1.1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #333;
-  }
-  
-  .galeria .imagen .textoatras .texto ol {
-    font-size: 0.8em;
-    line-height: 1.1em;
-    font-weight: 800;
-    color: #555;
-  }
+li {
+    float: left; /*alineado horizontalmente */
+}
 
-  footer {
-    background-color: #333;
-    text-align: center;
-    margin-bottom: 0;
-    width: 100%;
-    height: 3%;
-  }
-  
-  .fot {
-    color: white;
-  }
-  
-  #ref {
-    padding: 8px;
-    width: 50px;
-    height: 50px;
-  }
+li a {
+    display: block; /*contenedor en bloque */
+    color: white; /*texto en blanco */
+    text-align: center; /*alineacion centrada*/
+    padding: 14px 16px; /*espaciado dentro del enlace */
+    text-decoration: none; /*elimina subrayado */
+}
+
+li a:hover {
+    background-color: #111; /*cambia el color de fondo cuando el mouse pasa por encima */
+}
+
+.galeria {
+    position: relative; /*posiciona relativamente el contenedor */
+    display: flex; /*contenedor flexible*/
+    justify-content: center; /*centra los elementos */
+    align-items: center; /*alineacion verticalmente */
+    flex-wrap: wrap; /*permite que los elementos se envuelvan */
+    max-width: 1100px; /*ancho maximo*/
+    margin-top: 70px; /*margen arriba*/
+    margin-left: 200px; /*margen a la izquierda*/
+}
+
+.galeria .imagen {
+    position: relative; /*posición relativa */
+    width: 300px; /*ancho*/
+    height: 320px; /*altura*/
+    margin: 15px; /*espaciao entre las imágenes */
+    overflow: hidden; /*evita que los elementos salgan del contorno */
+    cursor: pointer; /*cursor en forma de mano cuando pasa sobre la imagen */
+}
+
+.galeria .imagen .carro,
+.galeria .imagen .textoatras {
+    position: absolute; /*posiciona los elementos absolutamente dentro de la imagen */
+    top: 0; /*margen arriba*/
+    left: 0; /*margen a la izquierda */
+    width: 100%; /*ancho*/
+    height: 100%; /*alto*/
+}
+
+.galeria .imagen .carro img {
+    position: absolute; /*posiciona la imagen de forma absoluta */
+    top: 0; /*margen arriba*/
+    left: 0; /*margen de la izquierda */
+    width: 100%; /*ancho*/
+    height: 100%; /*alto*/
+    object-fit: cover; /*ajusta la imagen para cubrir el área de la imagen */
+}
+
+.galeria .imagen .textoatras::before {
+    content: ''; /*contenido vacio */
+    position: absolute; /*posicion absoluta */
+    top: 0; /*margen arriba*/
+    left: 0; /*margen de l izquierda */
+    width: 100%; /*ancho*/
+    height: 100%; /*alto*/
+    background: rgba(226, 226, 226, 0.8); /*fondo gris*/
+    transform: scaleX(0); /*inicialmente, el fondo está colapsado en el eje X */
+    transition: transform 0.5s ease-in-out; /*transicion suave para expandir el fondo */
+    transform-origin: right; /*el fondo se expande desde la derecha */
+}
+
+.galeria .imagen:hover .textoatras::before {
+    transform: scaleX(1); /*el fondo se expande completamente */
+    transition-delay: 0s; /*sin demora en la transición */
+    transform-origin: left; /*el fondo se expande desde la izquierda */
+}
+
+.galeria .imagen .textoatras {
+    display: flex; /*contenedor flexible*/
+    justify-content: center; /*centra el contenido horizontalmente */
+    align-items: center; /*alineacion verticalmente */
+    padding: 0; /*relleno*/
+    text-align: center; /*alineacion centrada*/
+}
+
+.galeria .imagen .textoatras .texto {
+    position: relative; /*posiciona el texto de forma relativa */
+    z-index: 1; /*texto sobre el fondo */
+    opacity: 0; /*el texto está invisible */
+    transition: opacity 0.5s ease; /*transicion suave para la visibilidad */
+}
+
+.galeria .imagen:hover .textoatras .texto {
+    opacity: 1; /*el texto se vuelve visible */
+}
+
+.galeria .imagen .textoatras .texto h3 {
+    font-size: 1.1em; /*tamaño de letra */
+    text-transform: uppercase; /*texto en mayúsculas */
+    letter-spacing: 1px; /*espaciado entre letras */
+    color: #333; /*color de texto*/
+}
+
+.galeria .imagen .textoatras .texto ol {
+    font-size: 0.8em; /*tamaño de letra */
+    line-height: 1.1em; /*altura*/
+    font-weight: 800; /*negrita */
+    color: #555; /*color de texto*/
+}
+
+footer {
+    background-color: #333; /*color de fondo*/
+    text-align: center; /*alineacion centrada*/
+    margin-bottom: 0; /*margen inferior*/
+    width: 100%; /*ancho*/
+    height: 3%; /*altura*/
+}
+
+.fot {
+    color: white; /*color de texto*/
+}
+
+#ref {
+    padding: 8px; /*espaciado interno */
+    width: 50px; /*ancho de iconos*/
+    height: 50px; /*alto de iconos*/
+}
